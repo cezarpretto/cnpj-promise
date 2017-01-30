@@ -1,9 +1,10 @@
-import jsonpClient from 'jsonp-client'
 import Promise from 'promise'
+import jsonp from 'jsonp'
 
-export default function jsonp(url) {
+export default function jsonpFetch(url) {
   return new Promise((resolve, reject) => {
-    jsonpClient(url, (err, data) => {
+    console.log(url);
+    jsonp(url, null, (err, data) => {
       if(err) {
         reject(err)
       }else{
