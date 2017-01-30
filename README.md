@@ -13,7 +13,7 @@ $ npm install --save cnpj-promise
 ```js
 import CnpjPromise from 'cnpj-promise'
 
-CnpjPromise('05132607000149').then(data => {
+CnpjPromise('47508411022559').then(data => {
   console.log(data);
   //   {
   // 	"atividade_principal": [{
