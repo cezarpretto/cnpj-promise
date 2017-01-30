@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch'
 import CnpjPromiseError from '../errors/cnpj-promise-error'
 import Promise from 'promise'
+import jsonp from './jsonp'
 
 export default function fetchReceitaWs(cnpjCleanValue) {
   const url = `https://www.receitaws.com.br/v1/cnpj/${cnpjCleanValue}`
@@ -13,15 +14,15 @@ export default function fetchReceitaWs(cnpjCleanValue) {
   }
 
   return new Promise((resolve, reject) => {
-    fetch(url, options)
+    jsonp(url)
       .then(analyzeAndParseResponse)
       .then(checkForReceitaWsError)
       .then(resolvePromise)
       .catch(rejectPromise)
 
     function analyzeAndParseResponse(response) {
-      if(response.ok){
-        return response.json()
+      if(response.status === 'OK'){
+        return response
       }
 
       throw Error('Erro ao se conectar com o serviço ReceitaWS.')

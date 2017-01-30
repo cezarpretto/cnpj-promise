@@ -1,7 +1,7 @@
 'use strict'
 import CnpjPromise from './src/cnpj-promise'
 
-CnpjPromise('05132607000149').then(data => {
+CnpjPromise('14.994.399/0001-88').then(data => {
   console.log(data);
 }).catch(err => {
   console.log(err);
