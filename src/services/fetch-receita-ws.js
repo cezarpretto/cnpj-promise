@@ -5,7 +5,6 @@ import jsonpFetch from './jsonp'
 
 export default function fetchReceitaWs(cnpjCleanValue) {
   const url = `https://www.receitaws.com.br/v1/cnpj/${cnpjCleanValue}`
-  console.log(url);
   const options = {
     method: 'GET',
     mode: 'cors',
