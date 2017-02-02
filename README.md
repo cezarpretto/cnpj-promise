@@ -1,5 +1,5 @@
 # CNPJ Promise
-Busca por CNPJ integrado com o webservice da receitaWS
+Busca por CNPJ integrado com o webservice da receitaWS. Baseado na idéia e arquitetura do [cep-promise](http://github.com).
 
 ## Como utilizar
 
