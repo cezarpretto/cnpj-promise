@@ -1,6 +1,6 @@
 {
   "name": "cnpj-promise",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Busca pelos dados da empresa diretamente do Receita WS",
   "main": "dist/cnpj-promise.js",
   "scripts": {
