@@ -1,5 +1,5 @@
 'use strict'
-import CnpjPromise from './src/cnpj-promise'
+import CnpjPromise from './dist/cnpj-promise'
 
 CnpjPromise('14994399000188').then(data => {
   console.log(data);
