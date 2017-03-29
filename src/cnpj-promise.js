@@ -5,7 +5,7 @@ import fetchReceitaWs from './services/fetch-receita-ws'
 
 const CNPJ_SIZE = 14
 
-var cnpjPromise = function(cnpjRawValue) {
+var cnpjPromise = function(cnpjRawValue, options) {
   return new Promise((resolve, reject) => {
     Promise.resolve(cnpjRawValue)
       .then(validateInputType)
@@ -51,7 +51,7 @@ var cnpjPromise = function(cnpjRawValue) {
     }
 
     function fetch(cnpjCleanValue) {
-      resolve(fetchReceitaWs(cnpjCleanValue))
+      resolve(fetchReceitaWs(cnpjCleanValue, options))
     }
 
     function rejectPromise(error) {

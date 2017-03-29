@@ -22,7 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var CNPJ_SIZE = 14;
 
-var cnpjPromise = function cnpjPromise(cnpjRawValue) {
+var cnpjPromise = function cnpjPromise(cnpjRawValue, options) {
   return new _promise2.default(function (resolve, reject) {
     _promise2.default.resolve(cnpjRawValue).then(validateInputType).then(removeSpecialCharacters).then(validateInputLength).then(fetch).catch(rejectPromise);
 
@@ -63,7 +63,7 @@ var cnpjPromise = function cnpjPromise(cnpjRawValue) {
     }
 
     function fetch(cnpjCleanValue) {
-      resolve((0, _fetchReceitaWs2.default)(cnpjCleanValue));
+      resolve((0, _fetchReceitaWs2.default)(cnpjCleanValue, options));
     }
 
     function rejectPromise(error) {

@@ -127,3 +127,27 @@ CnpjPromise('47508411022559').then(data => {
   console.log(err);
 })
 ```
+
+### Parametro options
+
+Opcionalmente você pode configurar a requisição passando o parametro *options*.
+Consulte a documentação das dependencias desse projeto para saber como usar essa funcionalidade.
+
+
+```js
+const options = {
+      timeout: 6000,
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'content-type': 'application/json;charset=utf-8'
+      }
+  }
+
+CnpjPromise(cnpj, options).then(data => {
+//CnpjPromise('14994399000188', options).then(data => {
+  console.log(data);
+}).catch(err => {
+  console.log(err);
+})
+```

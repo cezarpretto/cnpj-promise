@@ -23,15 +23,18 @@ var _jsonp2 = _interopRequireDefault(_jsonp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function fetchReceitaWs(cnpjCleanValue) {
+function fetchReceitaWs(cnpjCleanValue, options) {
   var url = 'https://www.receitaws.com.br/v1/cnpj/' + cnpjCleanValue;
-  var options = {
-    method: 'GET',
-    mode: 'cors',
-    headers: {
-      'content-type': 'application/json;charset=utf-8'
-    }
-  };
+
+  if (!options) {
+    options = {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'content-type': 'application/json;charset=utf-8'
+      }
+    };
+  }
 
   return new _promise2.default(function (resolve, reject) {
     if (typeof window === 'undefined') {
