@@ -71,7 +71,7 @@ CnpjPromise('47508411022559').then(data => {
 ### Realizando uma consulta com require
 
 ```js
-var cnpjPromise = require('./dist/cnpj-promise').default
+var CnpjPromise = require('cnpj-promise').default
 
 CnpjPromise('47508411022559').then(data => {
   console.log(data);
