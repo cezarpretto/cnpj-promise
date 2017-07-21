@@ -1,5 +1,5 @@
 {
-  "name": "cnpj-promise",
+  "name": "@kapmug/cnpj-promise",
   "version": "3.0.0",
   "description": "Busca pelos dados da empresa diretamente do Receita WS",
   "main": "dist/cnpj-promise.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cezarpretto/cnpj-promise.git"
+    "url": "git+https://github.com/kapmug/cnpj-promise.git"
   },
-  "author": "@cezarpretto",
+  "author": "@kapmug",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cezarpretto/cnpj-promise/issues"
+    "url": "https://github.com/kapmug/cnpj-promise/issues"
   },
-  "homepage": "https://github.com/cezarpretto/cnpj-promise#readme",
+  "homepage": "https://github.com/kapmug/cnpj-promise#readme",
   "dependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.22.2",

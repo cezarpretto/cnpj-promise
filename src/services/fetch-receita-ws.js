@@ -3,13 +3,16 @@ import CnpjPromiseError from '../errors/cnpj-promise-error'
 import Promise from 'promise'
 import jsonpFetch from './jsonp'
 
-export default function fetchReceitaWs(cnpjCleanValue) {
+export default function fetchReceitaWs(cnpjCleanValue, options) {
   const url = `https://www.receitaws.com.br/v1/cnpj/${cnpjCleanValue}`
-  const options = {
-    method: 'GET',
-    mode: 'cors',
-    headers: {
-      'content-type': 'application/json;charset=utf-8'
+
+  if(!options) {
+    options = {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'content-type': 'application/json;charset=utf-8'
+      }
     }
   }
 
